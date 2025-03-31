@@ -1,0 +1,73 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root{
+    --cell-size: 100px;
+    --mark-size: cal(var(--cell-size) * 0.9);
+
+}
+
+body{
+    margin: 0;
+}
+
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell{
+    width: var(--cell-size);
+    height: 100px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+    /* border-left: none; */
+    border-top: none;
+}
+
+.cell:nth-child(3n+1){
+    border-left: none;
+
+}
+
+.cell:nth-child(3n){
+    border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9){
+    border-bottom: none;
+}
+
+.cell.x::before,
+.cell.o::after{
+    content: '';
+    display: block;
+    width: calc(var(--mark-size) * 0.15);
+    height: var(--mark-size);
+    background-color: black;
+}
+
+.cell.x::before{
+    transform: rotate(45deg);
+}
+
+.cell.o::after{
+    transform: rotate(-45deg);
+}

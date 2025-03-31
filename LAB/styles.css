@@ -1,0 +1,67 @@
+/* External CSS */
+#test-id {
+    color: teal;
+}
+
+.test-class {
+    color: darkblue;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    color: blue;
+}
+
+/* Pseudo class */
+h1:hover {
+    text-decoration: underline overline;
+    margin-bottom: 20px;
+    transition-duration: 0.5s;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: blueviolet;
+    color: black; /* source order rule*/
+    border-style: dotted;
+    margin: 5px;
+    padding: 4px;
+    width: 50vh;
+    
+
+}
+
+p:hover {
+    animation: shake 0.2s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+* {
+    margin: 0 !important;
+    padding: 0;
+
+}
+
+.flex-container {
+    display: flex; 
+    justify-content: center; /* Center elements horizontally */
+    align-items: center; /* Center elements vertically */
+    flex-wrap: wrap;
+    gap: 16px;
+    height: 100vh; 
+    border: 2cap solid teal;
+    flex-direction: row;
+}
+
+
+
+

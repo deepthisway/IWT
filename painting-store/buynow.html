@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="./index.html"><div class="logo">DEEP HALS MUSEUM<br>HAARLEM</div></a>
+        </div>
+        <nav class="nav-middle">
+            <a href="#">VISIT</a>
+            <a href="#">SEE & DO</a>
+            <a href="./orderpage.html">COLLECTION</a>
+            <a href="#">ABOUT US</a>
+        </nav>
+        <div class="nav-right">
+            <!-- <button class="menu-btn">MENU</button> -->
+        </div>
+    </header>
+    <section class="hero">
+        <div class="image-container">
+            <img src="./images/CHECKOU.jpg" alt="Painting 1">
+            <img src="./images/CHECKOU.JPG" alt="Painting 2">
+            <div class="shadow"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="purchaseh1">CHECKOUT</h1>
+        </div>
+    </section>
+    
+    <!-- checkout container -->
+     <div class="checkout-wrapper">
+    <div class="checkout-container">
+        <div class="checkout-form-section">
+            <h2>Checkout</h2>
+            <input type="text" class="checkout-input" placeholder="Full Name" required>
+            <input type="text" class="checkout-input" placeholder="Address Line 1*" required>
+            <input type="text" class="checkout-input" placeholder="Address Line 2*" required>
+            <input type="text" class="checkout-input" placeholder="City*" required>
+            <input type="text" class="checkout-input" placeholder="State*" required>
+            <input type="text" class="checkout-input" placeholder="Card Details" required>
+            <button class="checkout-button">Confirm Purchase</button>
+        </div>
+        <div class="checkout-image-section">
+            <img id="checkoutImage" class="checkout-image" src="" alt="Selected Product">
+            <p id="checkoutPrice" class="checkout-price"></p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>FRANS HALS MUSEUM</h3>
+            <p>Groot Heiligland 62, Haarlem<br>
+               Open Tuesday – Sunday<br>
+               11 AM – 5 PM</p>
+            <h4>HAL</h4>
+            <p>Grote Markt 16, Haarlem<br>
+               Temporary modern and contemporary art exhibition</p>
+        </div>
+        <div class="footer-section">
+            <h4>SUPPORT US</h4>
+            <p>NEWS<br>
+               PRESS<br>
+               WORK AT<br>
+               CONTACT</p>
+        </div>
+        <div class="footer-section newsletter">
+            <h4>STAY INFORMED</h4>
+            <p>Subscribe to our newsletter</p>
+            <input type="email" placeholder="example@email.com">
+            <button>SUBSCRIBE</button>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Terms and conditions | Privacy Statement | Credits</p>
+        <p>VRIENDEN LOTERIJ & HAARLEM</p>
+    </div>
+</footer>
+
+    <script>
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                image: params.get("image"),
+                price: params.get("price")
+            };
+        }
+
+        // Display the image and price
+        const { image, price } = getQueryParams();
+        if (image && price) {
+            document.getElementById("checkoutImage").src = image;
+            document.getElementById("checkoutPrice").innerText = "Total Price: $" + price;
+        }
+    </script>
+</body>
+</html>

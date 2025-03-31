@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Priority Experiment</title>
+    <style>
+        h1 {
+            color: black
+        }
+        </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Internal CSS */
+      #test-id {
+        color: green;
+      }
+
+      .test-class {
+        color: blue;
+      }
+
+      h1 {
+        color: orange;
+      }
+
+      * {
+        font-family: Arial, sans-serif;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <h1 id="test-id" class="test-class">
+        CSS Priority Experiment - Deep
+      </h1>
+      <p class="test-class">This is a paragraph with a class selector.</p>
+      <p id="test-id">This is a paragraph with an ID selector.</p>
+      <p style="color: purple">This paragraph uses inline styling.</p>
+      <p>This is a normal paragraph without special selectors.</p>
+    </div>
+  </body>
+</html>

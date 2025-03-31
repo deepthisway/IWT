@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Record Submission</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --background-color: #f4f6f7;
+            --text-color: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .academic-form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 35px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 15px;
+        }
+
+        .form-header h2 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 1px solid #d1d8e0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 600px) {
+            .academic-form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="academic-form-container">
+        <div class="form-header">
+            <h2>Academic Performance Record</h2>
+            <p>Please enter student academic details with precision</p>
+        </div>
+        <form id="academicRecordForm">
+            <div class="form-group">
+                <label for="rollNumber">Roll Number</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="rollNumber" class="form-control" placeholder="Enter Roll Number" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" class="form-control" placeholder="Full Name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Academic Program</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-graduation-cap"></i>
+                    <select id="course" class="form-control" required>
+                        <option value="">Select Program</option>
+                        <option value="B.Sc">Bachelor of Science (B.Sc)</option>
+                        <option value="B.Tech">Bachelor of Technology (B.Tech)</option>
+                        <option value="M.Sc">Master of Science (M.Sc)</option>
+                        <option value="M.Tech">Master of Technology (M.Tech)</option>
+                        <option value="MCA">Master of Computer Applications (MCA)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Subject Scores</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-calculator"></i>
+                    <input type="number" id="math" class="form-control" placeholder="Mathematics" required min="0" max="100">
+                </div>
+                <div class="input-wrapper" style="margin-top: 10px;">
+                    <i class="fas fa-flask"></i>
+                    <input type="number" id="science" class="form-control" placeholder="Science" required min="0" max="100">
+                </div>
+                <div class="input-wrapper" style="margin-top: 10px;">
+                    <i class="fas fa-book"></i>
+                    <input type="number" id="english" class="form-control" placeholder="English" required min="0" max="100">
+                </div>
+                <div class="input-wrapper" style="margin-top: 10px;">
+                    <i class="fas fa-landmark"></i>
+                    <input type="number" id="history" class="form-control" placeholder="History" required min="0" max="100">
+                </div>
+                <div class="input-wrapper" style="margin-top: 10px;">
+                    <i class="fas fa-globe"></i>
+                    <input type="number" id="geography" class="form-control" placeholder="Geography" required min="0" max="100">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Academic Record</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("academicRecordForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const data = {
+                rollNumber: document.getElementById("rollNumber").value,
+                name: document.getElementById("name").value,
+                course: document.getElementById("course").value,
+                marks: {
+                    math: parseInt(document.getElementById("math").value),
+                    science: parseInt(document.getElementById("science").value),
+                    english: parseInt(document.getElementById("english").value),
+                    history: parseInt(document.getElementById("history").value),
+                    geography: parseInt(document.getElementById("geography").value)
+                }
+            };
+
+            const response = await fetch("http://localhost:3000/api/students", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            alert(result.message);
+        });
+    </script>
+</body>
+</html>

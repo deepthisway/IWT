@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Deepanshu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      section, table, header, .contact-bar, hr {
+        max-width: 1240px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .glow-image {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+      }
+
+      .glow-image:hover {
+        animation: glow 1s infinite alternate;
+      }
+
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 20px 5px rgba(111, 193, 247, 0.933); /* #007acc with 80% opacity */
+        }
+        100% {
+          box-shadow: 0 0 30px 15px rgba(111, 293, 247, 0.933); /* Stronger glow */
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        text-align: center;
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden; /* Ensures rounded corners apply correctly */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border: none;
+      }
+
+      /* Header row styling */
+      th {
+        background-color: #007acc;
+        color: white;
+      }
+
+      /* Alternating row colors */
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      hr{
+        box-sizing: border-box;
+      }
+
+    </style>
+  </head>
+  <body
+    style="
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-image: url('./image.png');
+      background-repeat: no-repeat;
+      background-size: 30vh 35vh;
+      background-position: center;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      max-width: 100%;
+      box-sizing: border-box;
+    "
+  >
+    <!-- div to fade bg image -->
+    <div style="background-color: rgba(255, 255, 255, 0.811)">
+      <!-- Header Section s-->
+      <header
+        style="
+          color: black;
+          padding: 40px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          max-width: 1240px;
+          margin: auto;
+        "
+      >
+        <div style="max-width: 65%">
+          <h1
+            style="
+              margin: 0;
+              font-size: 48px;
+              font-weight: bolder;
+              line-height: 1.2;
+            "
+          >
+            Deepanshu Sirohi
+          </h1>
+          <h2
+            style="
+              margin: 5px 0;
+              font-size: 24px;
+              font-weight: 500;
+              color: #007acc;
+            "
+          >
+            Software Developer
+          </h2>
+          <p
+            style="
+              margin-top: 10px;
+              font-size: 16px;
+              font-weight: 300;
+              line-height: 1.6;
+              color: #333;
+            "
+          >
+            Hi, I'm Deepanshu, a passionate software developer with expertise in
+            building scalable and efficient applications. I specialize in
+            <strong>MERN stack, React, Node.js</strong>, and I love turning
+            ideas into reality through clean and maintainable code. I'm always
+            eager to learn new technologies and collaborate on exciting
+            projects!
+          </p>
+        </div>
+        <div style="text-align: center">
+          <a href="./my.jpg" style="display: inline-block">
+            <img
+              src="./my.jpg"
+              class="glow-image"
+              alt="Profile Picture of Deepanshu"
+              style="
+                width: 170px;
+                height: 180px;
+                border-radius: 50%;
+                border: 3px solid #e3ebf1;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </a>
+        </div>
+      </header>
+      <!-- Contact bar  -->
+      <div
+      class="contact-bar"
+        style="
+          display: flex;
+          justify-content: space-around;
+          gap: 50px;
+          flex-wrap: wrap;
+          padding: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: rgba(255, 255, 255, 0.786);
+          border-radius: 10px;
+          margin-top: -20px;
+          
+        "
+      >
+        <div style="display: flex; align-items: center">
+          <i
+            class="fa fa-envelope"
+            style="margin-right: 8px; color: #007acc; font-size: 20px"
+          ></i>
+          <a
+            href="mailto:contactdeep01@email.com?cc=523110061@nitkkr.ac.in&subject=Need%20a%20project%20done!"
+            style="color: black; font-weight: bold; text-decoration: none"
+          >
+            contactdeep01@email.com
+          </a>
+        </div>
+
+        <div style="display: flex; align-items: center">
+          <i
+            class="fa fa-github"
+            style="margin-right: 8px; color: #333; font-size: 20px"
+          ></i>
+          <strong style="font-size: 16px">
+            <a
+              href="https://github.com/deepthisway"
+              style="text-decoration: none; color: #007acc; font-weight: bold"
+              target="_blank"
+              >GitHub</a
+            >
+          </strong>
+        </div>
+        <div style="display: flex; align-items: center">
+          <i
+            class="fa fa-github"
+            style="margin-right: 8px; color: #333; font-size: 20px"
+          ></i>
+          <strong style="font-size: 16px">
+            <a
+              href="https://www.linkedin.com/in/deepanshu-sirohi-415269219/"
+              style="text-decoration: none; color: #007acc; font-weight: bold"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </strong>
+        </div>
+
+        <div style="display: flex; align-items: center">
+          <i
+            class="fa fa-phone"
+            style="margin-right: 8px; color: #007acc; font-size: 20px"
+          ></i>
+          <strong style="font-size: 16px; color: #333">+91 9193938710</strong>
+        </div>
+      </div>
+
+      <!-- Line -->
+       <div style="width: 100%;">
+         <hr
+         style="
+        border: none;
+        height: 1px;
+        background-color: black;
+        margin-top: 20px;
+        
+        "
+    />
+    </div>
+    <hr
+      style="
+        border: none;
+        height: 5px;
+        background-color: black;
+        margin-top: -4px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1240px;
+      "
+    />
+    
+
+      <!-- Contact Information -->
+      <section
+        style="
+          margin: 20px;
+          padding: 20px;
+          background-color: #ffffffe6;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <h3
+          style="
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+            display: inline-block;
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            color: #333;
+          "
+        >
+          Languages
+        </h3>
+        <ul style="list-style-type: none; padding: 0; margin: 0">
+          <li
+            style="
+              display: flex;
+              align-items: center;
+              margin-bottom: 15px;
+              font-size: 16px;
+              color: #333;
+            "
+          >
+            <span style="width: 80px; font-weight: bold">English</span>
+            <div
+              style="
+                flex-grow: 1;
+                max-width: 250px;
+                height: 12px;
+                background-color: #ddd;
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  width: 90%;
+                  height: 100%;
+                  background-color: #007acc;
+                  border-radius: 6px;
+                "
+              ></div>
+            </div>
+          </li>
+          <li
+            style="
+              display: flex;
+              align-items: center;
+              margin-bottom: 15px;
+              font-size: 16px;
+              color: #333;
+            "
+          >
+            <span style="width: 80px; font-weight: bold">Hindi</span>
+            <div
+              style="
+                flex-grow: 1;
+                max-width: 250px;
+                height: 12px;
+                background-color: #ddd;
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  width: 90%;
+                  height: 100%;
+                  background-color: #007acc;
+                  border-radius: 6px;
+                "
+              ></div>
+            </div>
+          </li>
+          <li
+            style="
+              display: flex;
+              align-items: center;
+              font-size: 16px;
+              color: #333;
+            "
+          >
+            <span style="width: 80px; font-weight: bold">French</span>
+            <div
+              style="
+                flex-grow: 1;
+                max-width: 250px;
+                height: 12px;
+                background-color: #ddd;
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  width: 30%;
+                  height: 100%;
+                  background-color: #007acc;
+                  border-radius: 6px;
+                "
+              ></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Skills Section -->
+      <section
+        style="
+          margin: 20px;
+          padding: 20px;
+          background-color: #ffffffe6;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+        "
+      >
+        <h3
+          style="
+            border-bottom: 2px solid #228ee0;
+            padding-bottom: 5px;
+            display: inline-block;
+          "
+        >
+          Skills
+        </h3>
+        <ul
+          style="
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+          "
+        >
+          <li
+            style="
+              background-color: #057bcaff;
+              color: #fff;
+              border: 1px solid #1778bd;
+              border-radius: 10px;
+              padding: 8px 15px;
+              display: inline-block;
+              font-size: 16px;
+              font-weight: 300;
+            "
+          >
+            HTML
+          </li>
+          <li
+            style="
+              background-color: #007acc;
+              color: #fff;
+              border: 1px solid #1778bd;
+              border-radius: 10px;
+              padding: 8px 15px;
+              display: inline-block;
+              font-size: 16px;
+              font-weight: 300;
+            "
+          >
+            CSS
+          </li>
+          <li
+            style="
+              background-color: #007acc;
+              color: #fff;
+              border: 1px solid #1778bd;
+              border-radius: 10px;
+              padding: 8px 15px;
+              display: inline-block;
+              font-size: 16px;
+              font-weight: 300;
+            "
+          >
+            JavaScript
+          </li>
+          <li
+            style="
+              background-color: #007acc;
+              color: #fff;
+              border: 1px solid #1778bd;
+              border-radius: 10px;
+              padding: 8px 15px;
+              display: inline-block;
+              font-size: 16px;
+              font-weight: 300;
+            "
+          >
+            React
+          </li>
+          <li
+            style="
+              background-color: #007acc;
+              color: #fff;
+              border: 1px solid #1778bd;
+              border-radius: 10px;
+              padding: 8px 15px;
+              display: inline-block;
+              font-size: 16px;
+              font-weight: 300;
+            "
+          >
+            MongoDB
+          </li>
+          <li
+            style="
+              background-color: #007acc;
+              color: #fff;
+              border: 1px solid #1778bd;
+              border-radius: 10px;
+              padding: 8px 15px;
+              display: inline-block;
+              font-size: 16px;
+              font-weight: 300;
+            "
+          >
+            Postgres
+          </li>
+          <li
+            style="
+              background-color: #007acc;
+              color: #fff;
+              border: 1px solid #1778bd;
+              border-radius: 10px;
+              padding: 8px 15px;
+              display: inline-block;
+              font-size: 16px;
+              font-weight: 300;
+            "
+          >
+            Docker
+          </li>
+        </ul>
+      </section>
+
+      <!-- Professional Experience -->
+      <section
+        style="
+          margin: 20px;
+          padding: 20px;
+          background-color: #ffffffe6;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+        "
+      >
+        <h3
+          style="
+            border-bottom: 2px solid #007acc;
+            z-index: -1;
+            padding-bottom: 5px;
+            display: inline-block;
+          "
+        >
+          Professional Experience
+        </h3>
+        <dl style="margin-top: 10px">
+          <dt style="margin: 5px 0">
+            <strong>Deep Corporation</strong> (2018 - Present)
+          </dt>
+          <!-- <dd style="margin: -4px;">Software Engineer</dd> -->
+          <dd>
+            Developing and maintaining web applications using the MERN stack.
+          </dd>
+        </dl>
+        <dl style="margin-top: 10px">
+          <!-- <h4 style="margin: 0;">Junior Web Developer</h4> -->
+          <dt style="margin: 5px 0"><strong>NIT Tech</strong> (2016 - 2018)</dt>
+          <dd>
+            Collaborated on multiple client-side and server-side projects,
+            focusing on JavaScript frameworks and backend technologies.
+          </dd>
+        </dl>
+      </section>
+
+      <!-- Education -->
+      <table>
+        <tr>
+          <th>Education</th>
+          <th>Duration</th>
+          <th>University</th>
+          <th>Certificate</th>
+        </tr>
+        <tr>
+          <td>Master of Computer Applications</td>
+          <td>2023 - 26</td>
+          <td>NIT Kurukshetra</td>
+          <td><a href="./new.pdf" target="_blank">View Certificate</a></td>
+        </tr>
+        <tr>
+          <td>Bachelor of Science</td>
+          <td>2019 - 22</td>
+          <td>CCSU</td>
+          <td><a href="./new.pdf" target="_blank">View Certificate</a></td>
+        </tr>
+      </table>
+      <!-- projects -->
+      <section
+        style="
+          margin: 20px;
+          padding: 20px;
+          background-color: #ffffffe6;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+        "
+      >
+        <h3
+          style="
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+            display: inline-block;
+          "
+        >
+          Projects
+        </h3>
+        <dl style="margin-top: 10px">
+          <dt style="margin: 5px 0"><strong>Chat Application</strong></dt>
+          <!-- <dd style="margin: -4px;">Software Engineer</dd> -->
+          <dd>Developed a chat app using the MERN stack.</dd>
+        </dl>
+        <dl style="margin-top: 10px">
+          <!-- <h4 style="margin: 0;">Junior Web Developer</h4> -->
+          <dt style="margin: 5px 0"><strong>Budget Tracker</strong></dt>
+          <dd>Build a awesome budget tracker using Next JS.</dd>
+        </dl>
+      </section>
+
+      <!-- Additional Information -->
+      <section
+        style="
+          margin: 20px;
+          padding: 20px;
+          background-color: #ffffffe6;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+        "
+      >
+        <h3
+          style="
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+            display: inline-block;
+          "
+        >
+          Additional Information
+        </h3>
+        <p>
+          Fluent in English. Passionate about open-source development and
+          contributing to tech communities.
+        </p>
+      </section>
+
+      <!-- Footer -->
+      <footer
+      style="
+        text-align: center;
+        max-width: 1240px;
+        padding: 50px;
+        color: white;
+        margin-top: 20px;
+
+        border-radius: 10px;
+        background: linear-gradient(135deg, #3ca5ea, #005f99);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      "
+    >
+      <!-- Form Section -->
+      <form
+        id="contactForm"
+        action=""
+        method="POST"
+        style="
+          max-width: 350px;
+          width: 100%;
+          padding: 30px;
+          background: #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          text-align: left;
+        "
+      >
+        <h2
+          style="
+            text-align: center;
+            color: #007acc;
+            font-family: 'Arial', sans-serif;
+          "
+        >
+          Have Queries? Submit Here!
+        </h2>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          style="
+            padding: 12px;
+            border: 1px solid #007acc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+          "
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          style="
+            padding: 12px;
+            border: 1px solid #007acc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+          "
+        />
+        <button
+          type="submit"
+          style="
+            max-width: 180px;
+            padding: 12px;
+            background: #007acc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            align-self: center;
+            transition: 0.3s;
+          "
+          onmouseover="this.style.backgroundColor='#005f99';"
+          onmouseout="this.style.backgroundColor='#007acc';"
+        >
+          Submit
+        </button>
+      </form>
+    
+      <!-- Copyright & Audio Section -->
+      <div style="text-align: center; color: #fff;">
+        <p style="font-size: 16px;">&copy; 2025 Deepanshu</p>
+        <audio controls style="margin-top: 10px; width: 250px;">
+          <source src="" type="audio/mpeg" />
+        </audio>
+      </div>
+    
+      <!-- Call to Action -->
+      <a
+        href="resume.pdf"
+        download
+        style="
+          padding: 12px 24px;
+          background-color: #fff;
+          color: #007acc;
+          font-weight: bold;
+          text-decoration: none;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          transition: 0.3s;
+        "
+        onmouseover="this.style.backgroundColor='#005f99'; this.style.color='#fff';"
+        onmouseout="this.style.backgroundColor='#fff'; this.style.color='#007acc';"
+      >
+        Download Resume
+      </a>
+    
+      <!-- Scrolling Text -->
+      <div style="width: 100%; margin-top: 20px;">
+        <marquee
+          behavior="scroll"
+          direction="left"
+          scrollamount="6"
+          style="
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+          "
+        >
+          For any project inquiries, Get in touch with me today!
+        </marquee>
+      </div>
+    </footer>
+    
+    </div>
+  </body>
+</html>

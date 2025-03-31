@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Server Response</title>
+</head>
+<body>
+    <h1>Check the console part 2</h1>
+    <button id="fetchRes">Fetch Res Keys</button>
+    <button id="fetchReq">Fetch Req Keys</button>
+
+    <script>
+        document.getElementById('fetchRes').addEventListener('click', () => {
+            fetch('/api/res')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Response keys from /api/res:', data.resKeys);
+                })
+                .catch(error => console.error('Error fetching data from /api/res:', error));
+        });
+
+        document.getElementById('fetchReq').addEventListener('click', () => {
+            fetch('/api/req')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Request keys from /api/req:', data.resKeys);
+                })
+                .catch(error => console.error('Error fetching data from /api/req:', error));
+        });
+    </script>
+</body>
+</html>
