@@ -37,8 +37,9 @@ export async function POST(req: NextRequest)    {
         const data = await req.json();
         console.log("data is", data)
         // assign grades
-        const subjectsWithGrades = data.subjects.map((subject : {name: string; marks: number}) => ({
+        const subjectsWithGrades = data.subjects.map((subject : {name: string; marks: number; code:string}) => ({
             name: subject.name,
+            code: subject.code,
             marks: subject.marks,
             grade: getGrade(subject.marks)
         }))
@@ -71,7 +72,7 @@ export async function POST(req: NextRequest)    {
     }
 }
 
-export async function GET(res: NextResponse) {
+export async function GET() {
     await connectDB();
 
     try{

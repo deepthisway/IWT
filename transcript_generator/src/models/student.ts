@@ -4,12 +4,14 @@ interface Subject{
     name: string;
     marks: number;
     grade: string;
+    code: string;
 }
 
 const subjectSchema = new mongoose.Schema <Subject> ({
     name: {type: String, required: true},
     marks: {type: Number, required: true},
-    grade: {type: String, required: true}
+    grade: {type: String, required: true},
+    code: {type: String, required: true}
 })
 
 const studentSchema = new mongoose.Schema({
