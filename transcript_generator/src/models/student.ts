@@ -16,6 +16,7 @@ const studentSchema = new mongoose.Schema({
     name: {type: String, required: true},
     dob: {type: Date, required: true},
     address: {type: String, required: true},
+    roll: {type: String, required: true},
     email: {type: String, required: true},
     phone: {type: String, required: true},
     subjects: [subjectSchema],
@@ -23,5 +24,5 @@ const studentSchema = new mongoose.Schema({
     created_at: {type: Date, default: Date.now}
 })
 
-const Student = mongoose.model("Student", studentSchema);
+const Student = mongoose.models.Student || mongoose.model("Student", studentSchema);
 export default Student;

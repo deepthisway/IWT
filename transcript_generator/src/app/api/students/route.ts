@@ -16,17 +16,16 @@ const calculateCGPA = (subjects : {marks : number}[]) => {
     if(!subjects.length) return 0;
 
     const gradePoints: Record<string, number> = {
-        "A+": 4.0,
-        "A": 3.7,
-        "B+": 3.3,
-        "B": 3.0,
-        "C+": 2.3,
-        "C": 2.0,
+        "A+": 10.0,
+        "A": 9.0,
+        "B+": 8.0,
+        "B": 7.0,
+        "C+": 6.0,
+        "C": 5.0,
         "F": 0.0,
     };
       
       const totalPoints = subjects.reduce((sum, { marks }) => sum + gradePoints[getGrade(marks)], 0);
-      console.log("total points", totalPoints);
 
       return Math.round((totalPoints / subjects.length) * 100) / 100;
 }
@@ -47,9 +46,11 @@ export async function POST(req: NextRequest)    {
 
         const newStudent = new Student({
             ...data,
+            roll: data.roll.toUpperCase(),
             subjects: subjectsWithGrades,
             cgpa
         })
+        console.log("new student is", newStudent);
 
         await newStudent.save();
         return NextResponse.json({
